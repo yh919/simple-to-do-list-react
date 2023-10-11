@@ -1,38 +1,74 @@
+/** @format */
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100%;
+  border: 1px solid grey;
+  margin: 50px 30px;
+  padding: 25px 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.to-do-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.to-do-container ul li {
+  width: 200px;
+  justify-content: start;
+  overflow-wrap: break-word;
+  list-style-type: "🟩";
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
+  list-style-type: "✅" !important;
+}
+
+.todos {
+  display: flex;
+}
+
+.deleteItem {
+  cursor: pointer;
+}
+
+.AddItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.AddItems {
+  width: 300px;
+}
+
+.AddItems input {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+.AddItems button {
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 5px;
+  border: none;
+  background-color: lightblue;
+  font-weight: bold;
+  border-radius: 5px;
+}
+& .AddItems button:hover {
+  background-color: rgb(31, 126, 158);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
